@@ -954,7 +954,12 @@ declare namespace Consul {
 
         interface Options {
             method: Function;
-            options?: CommonOptions;
+            options?: WatchOptions;
+        }
+        
+        interface WatchOptions extends CommonOptions{
+            key: string;
+            index?: number;
         }
     }
 
